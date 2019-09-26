@@ -3,14 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/list_item">
+    android:id="@+id/list_item"
+    android:padding="10dp">
 
-    <TextView
-        android:id="@+id/ItemTextView"
+    <Button
+        android:id="@+id/itemButton"
+        style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="36sp"
+        android:layout_height="wrap_content"
         android:text="Jaakko"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
