@@ -10,29 +10,24 @@ import android.widget.Button;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-
 class MainAdapter extends ArrayAdapter<Contact> {
 
-    private Boolean firstNameFirst;
-    private Context context;
-    private List<Contact> contactList;
+    String TAG = "QWERTY2";
+    private Boolean firstNameFirst = true;
 
     MainAdapter(Context c, List<Contact> contactList){
-        super(c, R.layout.list_item, R.id.itemButton);
-
-        this.context = c;
-        this.contactList = contactList;
+        super(c,0,contactList);
     }
 
-    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         Contact contact = getItem(position);
+
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
+
         Button name = convertView.findViewById(R.id.itemButton);
 
         if(firstNameFirst){

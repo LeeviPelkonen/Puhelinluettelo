@@ -17,7 +17,7 @@ public class Contact {
         return firstName;
     }
 
-    public void changeFirstName(String firstName){
+    public void setFirstName(String firstName){
         this.firstName = firstName;
     }
 
@@ -25,7 +25,7 @@ public class Contact {
         return lastName;
     }
 
-    public void changeLastName(String lastName){
+    public void setLastName(String lastName){
         this.lastName = lastName;
     }
 
